@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class GlassBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnBreak()
     {
-        
+        gameObject.SetActive(false);
+        Debug.Log("Glass has been broken");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnHover()
     {
-        
+        Debug.Log("Glass is being hovered");
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Hand")
+        {
+            gameObject.SetActive(false);
+            Debug.Log("Glass has been broken");
+        }
     }
 }

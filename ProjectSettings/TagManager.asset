@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Hand
   - Handle
+  - SamplesInfoPanel
+  - Holder
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,6 @@ TagManager:
   - Handle
   - Floor
   - Blanket
-  - 
-  - 
   - 
   - 
   - 
