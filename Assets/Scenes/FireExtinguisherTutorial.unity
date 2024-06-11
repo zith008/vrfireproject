@@ -257,6 +257,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2080987016}
     m_Modifications:
+    - target: {fileID: 3772999725854711432, guid: a29f20b6e82477c46a5551fc54ed0c45, type: 3}
+      propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 1717091801}
     - target: {fileID: 4849039057815342261, guid: a29f20b6e82477c46a5551fc54ed0c45, type: 3}
       propertyPath: m_Name
       value: Spray Effect
@@ -315,6 +319,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4891284233849727731, guid: a29f20b6e82477c46a5551fc54ed0c45, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7800176257454375532, guid: a29f20b6e82477c46a5551fc54ed0c45, type: 3}
+      propertyPath: CollisionModule.collisionMessages
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
