@@ -10,7 +10,6 @@ public class MainMenuScript : MonoBehaviour
     public GameObject trappedTutorial;
     public GameObject stopDropTutorial;
     public GameObject smokeRoomTutorial;
-    public GameObject mainScenario;
 
     private bool isChanging;
     private float delay;
@@ -26,6 +25,7 @@ public class MainMenuScript : MonoBehaviour
                 SceneManager.LoadScene(1);
             } else if (other.gameObject == fireHoseTutorial) {
                 print("Teleporting to Fire Hose");
+                SceneManager.LoadScene(2);
             } else if (other.gameObject == trappedTutorial) {
                 print("Teleporting to Trapped");
                 SceneManager.LoadScene(3);
@@ -35,8 +35,6 @@ public class MainMenuScript : MonoBehaviour
             } else if (other.gameObject == smokeRoomTutorial) {
                 print("Teleporting to Smoke Room");
                 SceneManager.LoadScene(5);
-            } else if (other.gameObject == mainScenario) {
-                print("Teleporting to Main Scenario");
             }
 
             isChanging = true;

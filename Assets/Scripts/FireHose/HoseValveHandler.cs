@@ -9,6 +9,8 @@ public class HoseValveHandler : MonoBehaviour
     private bool isOn = false;
     private bool isFree = false;
     [SerializeField] private GameObject valve;
+
+    public ParticleSystem water;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,18 +25,21 @@ public class HoseValveHandler : MonoBehaviour
             // TODO: start the water flow
             Debug.Log("Water Hose is flowing");
             isOn = true;
+            water.Play();
         }
         else if (valve.transform.localRotation.z >= -0.9 && isOpen && isOn)
         {
             // TODO: stop the water flow
             Debug.Log("Water Hose is not flowing");
             isOn = false;
+            water.Stop();
         }
         if (isOn && !isOpen)
         {
             // TODO: stop the water flow
             Debug.Log("Water Hose is not flowing");
             isOn = false;
+            water.Stop();
         }
         if (isFree && rb.isKinematic)
         {
