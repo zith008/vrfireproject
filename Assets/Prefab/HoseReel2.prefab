@@ -3030,10 +3030,10 @@ MonoBehaviour:
   _constraints:
     MinAngle:
       Constrain: 1
-      Value: -180
+      Value: 0
     MaxAngle:
       Constrain: 1
-      Value: 0
+      Value: 180
 --- !u!1 &6839181476858950320
 GameObject:
   m_ObjectHideFlags: 0

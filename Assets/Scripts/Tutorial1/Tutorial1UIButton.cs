@@ -7,15 +7,11 @@ public class Tutorial1UIButton : MonoBehaviour
     [SerializeField]
     GameObject UIPanel;
 
-    void OnMouseDown() {
-        if (gameObject.name == "LeftButton")
-        {
-            UIPanel.GetComponent<Tutorial1TextPanel>().onClickLeft();
-        }
+    public void LeftButtonOnClick() {
+        UIPanel.GetComponent<Tutorial1TextPanel>().onClickLeft();
+    }
 
-        if (gameObject.name == "RightButton")
-        {
-            UIPanel.GetComponent<Tutorial1TextPanel>().onClickRight();
-        }
+    public void RightButtonOnClick() {
+        UIPanel.GetComponent<Tutorial1TextPanel>().onClickRight();
     }
 }
