@@ -6,25 +6,32 @@ using TMPro;
 public class Tutorial6TextPanel : MonoBehaviour
 {
     private string[] text;
+    private string finish = "Great job! By following these steps, you've effectively increased your chances of survival in a fire. Remember these steps as they could be life-saving in an actual emergency.";
 
     private int curr;
 
     private GameObject textField;
 
+    public GameObject leftButton;
+
+    private float _nextTime;
+
     // Start is called before the first frame update
     void Start()
     {
+        _nextTime = Time.time + 0.5f;
+
         textField = gameObject.transform.Find("Text").gameObject;
         curr = 0;
-        text = new string[5];
+        text = new string[6];
         text[0] = "Welcome again to FireDay: Emergency Response Training. In this tutorial, we will learn about the correct actions to take when trapped in a fire. It is vital to know these steps as they can significantly reduce injury in such situations.";
         text[1] = "Enter a safe room. Preferably one which has open windows, good ventilation and overlooks a road.";
         text[2] = "Shut the door behind you and seal the gap beneath the door with a blanket, rug or other fabric to prevent smoke from entering the room.";
         text[3] = "Go to the window, shout for help to alert others of the fire and dial 995 for the SCDF if you are able to.";
         text[4] = "Stay calm and do not attempt to jump out of the building.";
+        text[5] = "Now, let's put this knowledge to the test. You are in your living room when suddenly a big fire breaks out.";
 
         /*
-        text[5] = "Now, let's put this knowledge to the test. You are in your living room when suddenly a big fire breaks out.";
         text[6] = "Great job! By following these steps, you've effectively increased your chances of survival in a fire. Remember these steps as they could be life-saving in an actual emergency.";
         */
 
@@ -40,19 +47,35 @@ public class Tutorial6TextPanel : MonoBehaviour
 
     public void onClickLeft() 
     {
-        if (curr > 0)
+        if (Time.time >= _nextTime && curr > 0)
         {
             textField.GetComponent<TextMeshProUGUI>().SetText(text[curr-1]);
             curr = curr - 1;
+
+            _nextTime = Time.time + 0.5f;
         }
     }
 
     public void onClickRight()
     {
-        if (curr < text.Length - 1)
-        {
-            textField.GetComponent<TextMeshProUGUI>().SetText(text[curr+1]);
-            curr = curr + 1;
+        if (Time.time >= _nextTime) {
+            if (curr < text.Length - 1) {
+                textField.GetComponent<TextMeshProUGUI>().SetText(text[curr + 1]);
+                curr = curr + 1;
+            } else if (curr == text.Length - 1) {
+                
+                this.gameObject.SetActive(false);
+                curr = curr + 1;
+            } else if (curr == text.Length) {
+
+            }
+
+            _nextTime = Time.time + 0.5f;
         }
+    }
+
+    public void finishText() {
+        textField.GetComponent<TextMeshProUGUI>().SetText(finish);
+        leftButton.SetActive(false);
     }
 }
