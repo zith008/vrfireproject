@@ -7,10 +7,15 @@ public class Tutorial7TextPanel : MonoBehaviour
 {
     private string[] text;
 
+    private string finish = "Great job! By following these steps, you've effectively increased your chances of survival in a smoke-logged room. Remember these steps as they could be life-saving in an actual emergency.";
+
     private int curr;
 
     private GameObject textField;
 
+    public GameObject leftButton;
+
+    private float _nextTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +26,7 @@ public class Tutorial7TextPanel : MonoBehaviour
         text[1] = "If you are in a smoke-logged room, remember not to panic as this can worsen the situation. Instead, follow these critical steps:";
         text[2] = "Cover your nose and mouth with a wet cloth and avoid inhaling through the mouth. This can help filter out some of the smoke and provide cleaner air for you to breathe.";
         text[3] = "Get down, keep close to the ground and crawl towards the point of escape under the smoke. Smoke rises, so the air near the floor will be clearer.";
-
-        /*
         text[5] = "Now, let's put this knowledge to the test. You are in your bedroom when suddenly smoke starts entering the room.";
-        text[6] = "Great job! By following these steps, you've effectively increased your chances of survival in a smoke-logged room. Remember these steps as they could be life-saving in an actual emergency.";
-        */
 
         //Default text
         textField.GetComponent<TextMeshProUGUI>().SetText(text[0]);
@@ -39,19 +40,36 @@ public class Tutorial7TextPanel : MonoBehaviour
 
     public void onClickLeft() 
     {
-        if (curr > 0)
+        if (Time.time >= _nextTime && curr > 0)
         {
             textField.GetComponent<TextMeshProUGUI>().SetText(text[curr-1]);
             curr = curr - 1;
+
+            _nextTime = Time.time + 0.5f;
         }
     }
 
     public void onClickRight()
     {
-        if (curr < text.Length - 1)
-        {
-            textField.GetComponent<TextMeshProUGUI>().SetText(text[curr+1]);
-            curr = curr + 1;
+        if (Time.time >= _nextTime) {
+            print(curr);
+            if (curr < text.Length - 1) {
+                textField.GetComponent<TextMeshProUGUI>().SetText(text[curr + 1]);
+                curr = curr + 1;
+            } else if (curr == text.Length - 1) {
+                //BLANK
+                this.gameObject.SetActive(false);
+                curr = curr + 1;
+            }else if (curr == text.Length) {
+
+            }
+
+            _nextTime = Time.time + 0.5f;
         }
+    }
+
+    public void finishText() {
+        textField.GetComponent<TextMeshProUGUI>().SetText(finish);
+        leftButton.SetActive(false);
     }
 }
