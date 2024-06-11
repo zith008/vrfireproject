@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class TextPanel : MonoBehaviour
+public class ExampleTextPanel : MonoBehaviour
 {
     private string[] text;
 
