@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FireExtinguisherToggle : MonoBehaviour
+{
+    public ParticleSystem nozzle;
+    // Start is called before the first frame update
+    void Start()
+    {
+        nozzle.Pause();
+    }
+
+    // Update is called once per frame
+    public void PressedDown() {
+        nozzle.Play();
+    }
+
+    public void Released() {
+        nozzle.Pause();
+    }
+}
