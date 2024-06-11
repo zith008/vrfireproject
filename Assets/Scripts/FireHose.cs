@@ -5,7 +5,11 @@ using UnityEngine;
 public class FireHose : MonoBehaviour
 {
     public GameObject hoseValve;
-    public bool completed = false;
+    public GameObject nozzleValve;
+    public AreaChecker areaChecker;
+    public bool completedHoseCheck = false;
+    public bool completedNozzleCheck = false;
+    public bool completedTutorial = false;
 
     // Start is called before the first frame update
     void Start()
@@ -16,9 +20,17 @@ public class FireHose : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hoseValve.gameObject.transform.eulerAngles.y < -170 && !completed) {
-            completed = true;
-            print("Done");
+        if (hoseValve.transform.localRotation.y < -0.9 && !completedHoseCheck) {
+            completedHoseCheck = true;
+        }
+
+        if (nozzleValve.transform.localRotation.z < -0.9 && !completedNozzleCheck && completedHoseCheck) {
+            completedNozzleCheck = true;
+        }
+
+        if (areaChecker.exited && !completedTutorial) {
+            print(completedHoseCheck && completedNozzleCheck);
+            completedTutorial = true;
         }
     }
 }
