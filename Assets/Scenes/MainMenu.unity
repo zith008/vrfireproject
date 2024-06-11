@@ -1206,37 +1206,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 172693569901569627, guid: 9b4e3dfdf6a46ec4d9dc297afbf8ea6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1206083765}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b4e3dfdf6a46ec4d9dc297afbf8ea6a, type: 3}
---- !u!1 &1206083764 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 172693569901569627, guid: 9b4e3dfdf6a46ec4d9dc297afbf8ea6a, type: 3}
-  m_PrefabInstance: {fileID: 1206083763}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1206083765
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206083764}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.008909999, y: 0.0015, z: 0.017324999}
-  m_Center: {x: -0.0044549997, y: 0.00025987596, z: -4.656613e-10}
 --- !u!1 &1315916420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,7 +1858,6 @@ MonoBehaviour:
   trappedTutorial: {fileID: 5626554893733849121}
   stopDropTutorial: {fileID: 1658871947}
   smokeRoomTutorial: {fileID: 1681942028}
-  mainScenario: {fileID: 1206083764}
 --- !u!54 &1856808526
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1960,7 +1930,6 @@ MonoBehaviour:
   trappedTutorial: {fileID: 5626554893733849121}
   stopDropTutorial: {fileID: 1658871947}
   smokeRoomTutorial: {fileID: 1681942028}
-  mainScenario: {fileID: 1206083764}
 --- !u!54 &2096832090
 Rigidbody:
   m_ObjectHideFlags: 0
