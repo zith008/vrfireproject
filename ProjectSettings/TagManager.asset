@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Hand
   - Handle
+  - SamplesInfoPanel
+  - Holder
   - Fire
   - Water
   layers:
