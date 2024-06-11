@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FirePin : MonoBehaviour
 {
+    public FireExtinguisherHandle handle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class FirePin : MonoBehaviour
         if (other.gameObject.tag == "Handle")
         {
             //TODO: Remove pin
+            handle.hasPin = false;
             gameObject.SetActive(false);
         }
     }
