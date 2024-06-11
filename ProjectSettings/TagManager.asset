@@ -8,6 +8,8 @@ TagManager:
   - Handle
   - SamplesInfoPanel
   - Holder
+  - Fire
+  - Water
   layers:
   - Default
   - TransparentFX
