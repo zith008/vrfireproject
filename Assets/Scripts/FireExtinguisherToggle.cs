@@ -11,6 +11,12 @@ public class FireExtinguisherToggle : MonoBehaviour
         nozzle.Pause();
     }
 
+    private void OnParticleCollision(GameObject other) {
+        if (other.CompareTag("Fire")) {
+            other.GetComponent<ParticleSystem>().Stop();
+        }
+    }
+
     // Update is called once per frame
     public void PressedDown() {
         nozzle.Play();
