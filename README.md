@@ -20,9 +20,10 @@ Our goal is to address fire safety concerns and promote greater awareness within
 
 ## Installation Instructions
 To get started, follow the steps below:
-1. ~ToDo~
-2. ~ToDo~
-3. ~ToDo~
+1. Install [**SideQuest**](https://sidequestvr.com/download) into Oculus Quest.
+2. Download the APK file from [**Github**](https://github.com/SpaDay-XR/FireDay).
+3. Use SideQuest to upload the APK file to Oculus Quest.
+4. Run the APK file.
 
 ## Development tools used
 This application is created using [**Unity**](https://unity.com/), and the models is created using [**Blender**](https://blender.org/).
