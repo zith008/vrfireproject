@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIButton : MonoBehaviour
+public class Tutorial3UIButton : MonoBehaviour
 {
     [SerializeField]
     GameObject UIPanel;
@@ -10,12 +10,12 @@ public class UIButton : MonoBehaviour
     void OnMouseDown() {
         if (gameObject.name == "LeftButton")
         {
-            UIPanel.GetComponent<ExampleTextPanel>().onClickLeft();
+            UIPanel.GetComponent<Tutorial3TextPanel>().onClickLeft();
         }
 
         if (gameObject.name == "RightButton")
         {
-            UIPanel.GetComponent<ExampleTextPanel>().onClickRight();
+            UIPanel.GetComponent<Tutorial3TextPanel>().onClickRight();
         }
     }
 }
