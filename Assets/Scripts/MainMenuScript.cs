@@ -26,6 +26,7 @@ public class MainMenuScript : MonoBehaviour
                 SceneManager.LoadScene(1);
             } else if (other.gameObject == fireHoseTutorial) {
                 print("Teleporting to Fire Hose");
+                SceneManager.LoadScene(2);
             } else if (other.gameObject == trappedTutorial) {
                 print("Teleporting to Trapped");
                 SceneManager.LoadScene(3);

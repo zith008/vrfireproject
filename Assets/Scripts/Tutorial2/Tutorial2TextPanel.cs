@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Tutorial2TextPanel : MonoBehaviour
 {
     private string[] text;
 
-    private string finish = "Well done! You have successfully extinguished the fire.";
+    private string finish = "Well done! You have successfully prepared a working fire hose";
 
     private int curr;
 
@@ -33,7 +34,7 @@ public class Tutorial2TextPanel : MonoBehaviour
         text[2] = "Turn on the hose reel valve in an anti-clockwise direction.";
         text[3] = "Pull out the hose and test to see if there is water. Run it to the fire.";
         text[4] = "Turn on the water at the nozzle and direct it at the base of the fire.";
-        text[5] = "Now, let's apply what we've learned. You are in a bedroom, and a fire starts in a paper-filled dustbin.";
+        text[5] = "Now, let's apply what we've learned.";
 
         //Default text
         textField.GetComponent<TextMeshProUGUI>().SetText(text[0]);
@@ -65,14 +66,15 @@ public class Tutorial2TextPanel : MonoBehaviour
                 curr = curr + 1;
             } else if (curr == text.Length - 1) {
                 textField.SetActive(false);
-                image.SetActive(true);                
-            }else if (curr == text.Length) {
-                //BLANK
-                
+                image.SetActive(true);
+                curr = curr + 1;
+            } else if (curr == text.Length) {
                 textField.SetActive(true);
-                image.SetActive(false);        
+                image.SetActive(false);
                 this.gameObject.SetActive(false);
                 curr = curr + 1;
+            } else if (curr == text.Length + 1) {
+                SceneManager.LoadScene(0);
             }
 
             _nextTime = Time.time + 0.5f;
