@@ -8,6 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: fb40b9a37b12a484cb54a1133d41ccc5
+  - enabled: 1
+    path: Assets/Scenes/FireExtinguisherTutorial.unity
+    guid: ab4fa386292a9ee4a8eb9fc94da3cc8a
+  - enabled: 1
+    path: Assets/Scenes/HoseReelTutorial.unity
+    guid: 4f2753963e84d714da8cd7933426b763
+  - enabled: 1
+    path: Assets/Scenes/TrappedTutorial.unity
+    guid: d0ae938674d79fa46b2a6e0f262d9332
+  - enabled: 1
+    path: Assets/Scenes/StopDropTutorial.unity
+    guid: 8b291db65b5709f4abadfb4b2c04914c
+  - enabled: 1
+    path: Assets/Scenes/SmokeRoomTutorial.unity
+    guid: 204688eef4e89c74b8195ad676f4d752
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 09c6112d0b0760e47b4ee5f518ec6611, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: f52156310d1c7744fa0c2eacfddcfd46, type: 2}

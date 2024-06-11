@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Tutorial5TextPanel : MonoBehaviour
 {
@@ -68,14 +69,17 @@ public class Tutorial5TextPanel : MonoBehaviour
                 curr = curr + 1;
             } else if (curr == text.Length - 1) {
                 textField.SetActive(false);
-                image.SetActive(true);                
-            }else if (curr == text.Length) {
-                //BLANK
+                image.SetActive(true);
+                curr = curr + 1;
+            } else if (curr == text.Length) {
+                stopDropTutorial.StartFire();
 
                 textField.SetActive(true);
                 image.SetActive(false);   
                 this.gameObject.SetActive(false);
                 curr = curr + 1;
+            } else if (curr == text.Length + 1) {
+                SceneManager.LoadScene(0);
             }
 
             _nextTime = Time.time + 0.5f;
