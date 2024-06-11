@@ -14,12 +14,17 @@ public class Tutorial6TextPanel : MonoBehaviour
 
     public GameObject leftButton;
 
+    public GameObject image;
+
     private float _nextTime;
 
     // Start is called before the first frame update
     void Start()
     {
         _nextTime = Time.time + 0.5f;
+
+        image = gameObject.transform.Find("Image").gameObject;
+        image.SetActive(false);
 
         textField = gameObject.transform.Find("Text").gameObject;
         curr = 0;
@@ -59,15 +64,20 @@ public class Tutorial6TextPanel : MonoBehaviour
     public void onClickRight()
     {
         if (Time.time >= _nextTime) {
+            print(curr);
             if (curr < text.Length - 1) {
                 textField.GetComponent<TextMeshProUGUI>().SetText(text[curr + 1]);
                 curr = curr + 1;
             } else if (curr == text.Length - 1) {
-                
+                textField.SetActive(false);
+                image.SetActive(true);                
+            }else if (curr == text.Length) {
+                //BLANK
+
+                textField.SetActive(true);
+                image.SetActive(false);   
                 this.gameObject.SetActive(false);
                 curr = curr + 1;
-            } else if (curr == text.Length) {
-
             }
 
             _nextTime = Time.time + 0.5f;
