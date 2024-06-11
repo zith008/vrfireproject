@@ -16,18 +16,22 @@ public class Tutorial1TextPanel : MonoBehaviour
     {
         textField = gameObject.transform.Find("Text").gameObject;
         curr = 0;
-        text = new string[6];
-        text[0] = "Welcome to FireDay: Home Fire Safety Training. In this tutorial, we will learn how to use a fire extinguisher effectively. Remember, being prepared can save lives.";
-        text[1] = "First, let's understand the basics of using a fire extinguisher with the P.A.S.S. method: Pull, Aim, Squeeze, Sweep.";
-        text[2] = "Pull out the safety pin as instructed on the label.";
-        text[3] = "Aim the nozzle at the base of the fire.";
+        text = new string[10];
+        text[0] = "Welcome to FireDay: Home Fire Safety Training. In this tutorial, we will learn about the different types of fire extinguishers and how to use them effectively. Remember, being prepared can save lives.";
+        text[1] = "Water extinguishers are effective against ordinary combustible materials like paper, cloth, wood, plastics, and rubber. However, they should not be used on oil fires or electrical fires.";
+        text[2] = "CO2 extinguishers are suitable for flammable liquids and electrical equipment. They are less effective in open areas due to wind dispersing the CO2.";
+        text[3] = "Dry chemical powder extinguishers are versatile and can be used on ordinary combustibles, flammable liquids, and electrical fires.";
         text[4] = "Squeeze the lever to release the extinguishing agent.";
-        text[5] = "Sweep the nozzle from side to side to cover the area of the fire.";
+        text[5] = "Next, let's understand the basics of using a fire extinguisher with the P.A.S.S. method: Pull, Aim, Squeeze, Sweep";
+        text[6] = "Pull out the safety pin as instructed on the label.";
+        text[7] = "Aim the nozzle at the base of the fire.";
+        text[8] = "Squeeze the lever to release the extinguishing agent.";
+        text[9] = "Sweep the nozzle from side to side to cover the area of the fire.";
 
         //separate panel
         /*
-        text[6] = "Now, let's put what we've learned into practice. You are in a bedroom, and a fire starts in a paper-filled dustbin.";
-        text[7] = "Great job! You have successfully extinguished the fire.";
+        text[10] = "Now, let's put what we've learned into practice. You are in a bedroom, and a fire starts in a paper-filled dustbin.";
+        text[11] = "Great job! You have successfully extinguished the fire.";
         */
         
         //Default text
