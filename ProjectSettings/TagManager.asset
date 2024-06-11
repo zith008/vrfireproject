@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hand
+  - Handle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Hand
   - Water
   - UI
-  - 
+  - Handle
   - 
   - 
   - 
