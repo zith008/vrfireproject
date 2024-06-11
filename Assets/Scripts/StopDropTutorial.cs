@@ -11,6 +11,10 @@ public class StopDropTutorial : MonoBehaviour
         fire.Stop();
     }
 
+    public void StartFire() {
+        fire.Play();
+    }
+
     // Update is called once per frame
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("MainCamera")) {
