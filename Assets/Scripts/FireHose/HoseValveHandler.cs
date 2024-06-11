@@ -38,7 +38,7 @@ public class HoseValveHandler : MonoBehaviour
         }
         if (isFree && rb.isKinematic)
         {
-            rb.isKinematic = false;
+            // rb.isKinematic = false;
         }
     }
 
@@ -48,7 +48,7 @@ public class HoseValveHandler : MonoBehaviour
         if (other.gameObject.tag == "Holder" && !isFree)
         {
             Debug.Log("Valve is open");
-            rb.isKinematic = false;
+            // rb.isKinematic = false;
             isFree = true;
         }
     }
