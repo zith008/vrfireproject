@@ -1,0 +1,57 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class Tutorial5TextPanel : MonoBehaviour
+{
+    private string[] text;
+
+    private int curr;
+
+    private GameObject textField;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        textField = gameObject.transform.Find("Text").gameObject;
+        curr = 0;
+        text = new string[5];
+        text[0] = "Welcome again to FireDay: Emergency Response Training. In this tutorial, we will learn about the correct actions to take when clothing catches fire. It is vital to know these steps as they can significantly reduce injury in such situations.";
+        text[1] = "If your clothes catch fire, remember not to run or panic as this can worsen the situation by providing more oxygen to the flames. Instead, follow these critical steps:";
+        text[2] = "Stop. Cease all movement immediately. Running or moving quickly can fan the flames and make the fire worse.";
+        text[3] = "Drop. Carefully get down onto the ground. This prevents the flames from spreading upwards.";
+        text[4] = "Roll. Perform a rolling motion on the ground until all flames are extinguished. This action smothers the fire.";
+        /*
+        text[5] = "Now, let's put this knowledge to the test. You are in your bedroom when suddenly your clothes catch fire due to proximity to an open flame or heat source.";
+        text[6] = "Great job! By stopping, dropping, and rolling, you've effectively put out the fire on your clothing and prevented further injuries. Remember these steps as they could be life-saving in an actual emergency.";
+        */
+
+        //Default text
+        textField.GetComponent<TextMeshProUGUI>().SetText(text[0]);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //textField.GetComponent<TextMeshProUGUI>().SetText("A");
+    }
+
+    public void onClickLeft() 
+    {
+        if (curr > 0)
+        {
+            textField.GetComponent<TextMeshProUGUI>().SetText(text[curr-1]);
+            curr = curr - 1;
+        }
+    }
+
+    public void onClickRight()
+    {
+        if (curr < text.Length - 1)
+        {
+            textField.GetComponent<TextMeshProUGUI>().SetText(text[curr+1]);
+            curr = curr + 1;
+        }
+    }
+}
