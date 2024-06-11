@@ -17,13 +17,4 @@ public class FireExtinguisherToggle : MonoBehaviour
             other.GetComponent<ParticleSystem>().Stop();
         }
     }
-
-    // Update is called once per frame
-    public void PressedDown() {
-        nozzle.Play();
-    }
-
-    public void Released() {
-        nozzle.Stop();
-    }
 }

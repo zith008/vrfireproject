@@ -6,6 +6,11 @@ public class FireExtinguisherHandle : MonoBehaviour
 {
     public HandScript hand1 = null;
     public HandScript hand2 = null;
+
+    public ParticleSystem spray;
+
+    public bool hasPin = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,15 +20,21 @@ public class FireExtinguisherHandle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hand1 != null && hand1.isGrabbing)
+        if (hand1 != null && hand1.isGrabbing && !hasPin)
         {
             // TODO: Water comes out
             Debug.Log("Water comes out");
+            spray.Play();
+        } else if (hand1 != null && !hand1.isGrabbing) {
+            spray.Stop();
         }
-        if (hand2 != null && hand2.isGrabbing)
+        if (hand2 != null && hand2.isGrabbing && !hasPin)
         {
             // TODO: Water comes out
             Debug.Log("Water comes out");
+            spray.Play();
+        } else if (hand1 != null && !hand1.isGrabbing) {
+            spray.Stop();
         }
     }
 
