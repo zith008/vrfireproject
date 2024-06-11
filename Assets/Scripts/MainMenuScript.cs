@@ -23,6 +23,7 @@ public class MainMenuScript : MonoBehaviour
         if (!isChanging && Time.time >= delay) {
             if (other.gameObject == fireExtinguisherTutorial) {
                 print("Teleporting to Fire Extinguisher");
+                SceneManager.LoadScene(1);
             } else if (other.gameObject == fireHoseTutorial) {
                 print("Teleporting to Fire Hose");
             } else if (other.gameObject == trappedTutorial) {

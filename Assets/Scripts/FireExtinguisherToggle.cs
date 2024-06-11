@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireExtinguisherToggle : MonoBehaviour
 {
     public ParticleSystem nozzle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,6 @@ public class FireExtinguisherToggle : MonoBehaviour
     }
 
     public void Released() {
-        nozzle.Pause();
+        nozzle.Stop();
     }
 }

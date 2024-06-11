@@ -7,11 +7,15 @@ public class Tutorial1UIButton : MonoBehaviour
     [SerializeField]
     GameObject UIPanel;
 
-    public void LeftButtonOnClick() {
-        UIPanel.GetComponent<Tutorial1TextPanel>().onClickLeft();
-    }
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Hand")) {
+            if (gameObject.name == "LeftButton") {
+                UIPanel.GetComponent<Tutorial1TextPanel>().onClickLeft();
+            }
 
-    public void RightButtonOnClick() {
-        UIPanel.GetComponent<Tutorial1TextPanel>().onClickRight();
+            if (gameObject.name == "RightButton") {
+                UIPanel.GetComponent<Tutorial1TextPanel>().onClickRight();
+            }
+        }
     }
 }
