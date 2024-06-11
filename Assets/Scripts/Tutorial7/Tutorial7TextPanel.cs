@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Tutorial7TextPanel : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Tutorial7TextPanel : MonoBehaviour
 
     public GameObject leftButton;
 
+    public SmokeRoomTutorial smokeRoomTutorial;
+
     public GameObject image;
 
     private float _nextTime;
@@ -26,12 +29,12 @@ public class Tutorial7TextPanel : MonoBehaviour
 
         textField = gameObject.transform.Find("Text").gameObject;
         curr = 0;
-        text = new string[4];
+        text = new string[5];
         text[0] = "Welcome again to FireDay: Emergency Response Training. In this tutorial, we will learn about the correct actions to take when trapped in a smoke-logged room. It is vital to know these steps as they can significantly reduce injury in such situations.";
         text[1] = "If you are in a smoke-logged room, remember not to panic as this can worsen the situation. Instead, follow these critical steps:";
         text[2] = "Cover your nose and mouth with a wet cloth and avoid inhaling through the mouth. This can help filter out some of the smoke and provide cleaner air for you to breathe.";
         text[3] = "Get down, keep close to the ground and crawl towards the point of escape under the smoke. Smoke rises, so the air near the floor will be clearer.";
-        text[5] = "Now, let's put this knowledge to the test. You are in your bedroom when suddenly smoke starts entering the room.";
+        text[4] = "Now, let's put this knowledge to the test. You are in your bedroom when suddenly smoke starts entering the room.";
 
         //Default text
         textField.GetComponent<TextMeshProUGUI>().SetText(text[0]);
@@ -57,20 +60,22 @@ public class Tutorial7TextPanel : MonoBehaviour
     public void onClickRight()
     {
         if (Time.time >= _nextTime) {
-            print(curr);
             if (curr < text.Length - 1) {
                 textField.GetComponent<TextMeshProUGUI>().SetText(text[curr + 1]);
                 curr = curr + 1;
             } else if (curr == text.Length - 1) {
                 textField.SetActive(false);
-                image.SetActive(true);                
-            }else if (curr == text.Length) {
-                //BLANK
+                image.SetActive(true);
+                curr = curr + 1;
+            } else if (curr == text.Length) {
+                smokeRoomTutorial.StartSmoking();
 
                 textField.SetActive(true);
                 image.SetActive(false);   
                 this.gameObject.SetActive(false);
                 curr = curr + 1;
+            } else if (curr == text.Length + 1) {
+                SceneManager.LoadScene(0);
             }
 
             _nextTime = Time.time + 0.5f;
