@@ -138,7 +138,10 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: 8483ce7665aeb304db1e18fb09132ab8, type: 2}
+  - {fileID: 1547223255377929899, guid: 09c6112d0b0760e47b4ee5f518ec6611, type: 2}
+  - {fileID: 2534923780980844093, guid: f52156310d1c7744fa0c2eacfddcfd46, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -160,6 +163,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
+    Android: com.DefaultCompany.FireDay
     Standalone: com.DefaultCompany.FireDay
   buildNumber:
     Bratwurst: 0
