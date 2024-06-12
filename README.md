@@ -19,9 +19,11 @@ The interactive design offers users a unique opportunity to put into practice th
 Our goal is to address fire safety concerns and promote greater awareness within the community.
 
 ## Installation Instructions
+This application is developed for Meta Quest 2, Meta Quest 3 and Meta Quest Pro.
+
 To get started, follow the steps below:
-1. Install [**SideQuest**](https://sidequestvr.com/download) into Oculus Quest.
-2. Download the APK file from [**Github**](https://github.com/SpaDay-XR/FireDay).
+1. Install [**SideQuest**](https://sidequestvr.com/download on your personal computer.
+2. Download the APK file from [**Github**](https://github.com/SpaDay-XR/FireDay/releases).
 3. Use SideQuest to upload the APK file to Oculus Quest.
 4. Run the APK file.
 
@@ -29,4 +31,4 @@ To get started, follow the steps below:
 This application is created using [**Unity**](https://unity.com/), and the models is created using [**Blender**](https://blender.org/).
 
 ## Licensing
-~ToDo~
+No licensing was used for this project.
