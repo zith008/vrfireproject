@@ -25,7 +25,7 @@ public class FireExtinguisherHandle : MonoBehaviour
             // TODO: Water comes out
             Debug.Log("Water comes out");
             spray.Play();
-        } else if (hand1 != null && !hand1.isGrabbing) {
+        } else if (hand1 != null || !hand1.isGrabbing) {
             spray.Stop();
         }
         if (hand2 != null && hand2.isGrabbing && !hasPin)
@@ -33,7 +33,7 @@ public class FireExtinguisherHandle : MonoBehaviour
             // TODO: Water comes out
             Debug.Log("Water comes out");
             spray.Play();
-        } else if (hand1 != null && !hand1.isGrabbing) {
+        } else if (hand1 != null || !hand1.isGrabbing) {
             spray.Stop();
         }
     }

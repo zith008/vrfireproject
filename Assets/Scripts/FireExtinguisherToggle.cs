@@ -6,6 +6,7 @@ public class FireExtinguisherToggle : MonoBehaviour
 {
     public ParticleSystem nozzle;
     public Tutorial1TextPanel tutorial;
+    public AudioSource fireAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class FireExtinguisherToggle : MonoBehaviour
             other.GetComponent<ParticleSystem>().Stop();
             tutorial.gameObject.SetActive(true);
             tutorial.finishText();
+            fireAudio.Stop();
         }
     }
 }

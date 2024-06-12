@@ -261,6 +261,10 @@ PrefabInstance:
       propertyPath: tutorial
       value: 
       objectReference: {fileID: 1717091801}
+    - target: {fileID: 3772999725854711432, guid: a29f20b6e82477c46a5551fc54ed0c45, type: 3}
+      propertyPath: fireAudio
+      value: 
+      objectReference: {fileID: 1605329350}
     - target: {fileID: 4849039057815342261, guid: a29f20b6e82477c46a5551fc54ed0c45, type: 3}
       propertyPath: m_Name
       value: Spray Effect
@@ -719,6 +723,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1669493052614814850, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -756,6 +764,11 @@ SphereCollider:
 --- !u!198 &1605329349 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198321560017527566, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
+  m_PrefabInstance: {fileID: 1605329345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1605329350 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1669493052614814850, guid: 89956e675b749204c8e10395ce2b5fb9, type: 3}
   m_PrefabInstance: {fileID: 1605329345}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1717091797
@@ -925,6 +938,7 @@ MonoBehaviour:
   leftButton: {fileID: 1717091800}
   image: {fileID: 1328788465}
   fire: {fileID: 1605329349}
+  fireAudio: {fileID: 1605329350}
 --- !u!114 &1717091802
 MonoBehaviour:
   m_ObjectHideFlags: 0

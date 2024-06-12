@@ -20,6 +20,8 @@ public class Tutorial1TextPanel : MonoBehaviour
 
     public ParticleSystem fire;
 
+    public AudioSource fireAudio;
+
     private float _nextTime;
 
     // Start is called before the first frame update
@@ -79,6 +81,7 @@ public class Tutorial1TextPanel : MonoBehaviour
                 curr = curr + 1;
             } else if (curr == text.Length) {
                 fire.Play();
+                fireAudio.Play();
 
                 textField.SetActive(true);
                 image.SetActive(false);

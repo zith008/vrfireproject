@@ -6,6 +6,7 @@ public class WaterHose : MonoBehaviour
 {
     public ParticleSystem nozzle;
     public Tutorial2TextPanel tutorial;
+    public AudioSource FireAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class WaterHose : MonoBehaviour
     private void OnParticleCollision(GameObject other) {
         if (other.CompareTag("Fire")) {
             other.GetComponent<ParticleSystem>().Stop();
+            FireAudio.Stop();
             tutorial.gameObject.SetActive(true);
             tutorial.finishText();
         }
