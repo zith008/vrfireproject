@@ -1,15 +1,5 @@
-# DSTA Brainhack XRperience 2024
-
-#### Team: Spa Day
-#### Application: FireDay
 
 
-### Team members
-* [Abdul Khaliq Bin Roslan](https://github.com/breezetall)
-* [Leeroy Liu](https://github.com/leeroy999)
-* [Mohamed Asri](https://github.com/Asri1)
-* [Tang Hao Liang](https://github.com/nobodyishappy)
-* [Yong Shi Kang](https://github.com/yskie)
 
 
 ## FireDay
